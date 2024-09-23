@@ -56,7 +56,7 @@ nav ul li a:hover {
 }
 
 .hero {
-    height: 45vh; /* Ajusta la altura como desees */
+    height: 60vh; /* Ajusta la altura como desees */
     display: flex; /* Para centrar el contenido verticalmente */
     align-items: center; /* Centra verticalmente el contenido */
     justify-content: center; /* Centra horizontalmente el contenido */
@@ -158,7 +158,7 @@ h2 {
 }
 
 .contact {
-    padding: 60px 20px;
+    padding: 20px 20px;
     text-align: center;
     background-color: #fff;
     margin: 20px 0;

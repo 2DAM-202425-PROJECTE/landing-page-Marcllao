@@ -250,6 +250,11 @@ footer {
     padding: 1rem; /* py-4 */
 }
 
+/* Iconos */
+i {
+    color: #237e18; /* Color para los iconos */
+}
+
 /* Animaciones AOS (si lo deseas) */
 [data-aos] {
     opacity: 0;

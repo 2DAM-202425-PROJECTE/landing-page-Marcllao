@@ -1,14 +1,261 @@
-/* styles.css */
+/* General */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f7fafc; /* bg-gray-100 */
+    color: #2d3748; /* text-gray-800 */
+    margin: 0;
+}
 
-/* Personaliza los estilos a tu gusto */
+/* Header */
+.header {
+    background-color: #4a5568; /* bg-gray-800 */
+    padding: 1rem; /* p-4 */
+    display: flex;
+    align-items: center;
+}
+
+.logo-container {
+    margin-right: auto; /* mr-auto */
+}
+
+.logo {
+    height: 3rem; /* h-12 */
+    width: auto;
+    filter: brightness(150%);
+}
+
+.nav-container {
+    flex-grow: 1; /* flex-grow */
+    display: flex;
+    justify-content: center; /* justify-center */
+}
+
+.nav {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.nav li {
+    margin: 0 1.5rem; /* space-x-6 */
+}
+
+.nav a {
+    color: #ffffff; /* text-white */
+    font-size: 1.125rem; /* text-lg */
+    text-decoration: none;
+}
+
+.nav a:hover {
+    color: #63b3ed; /* hover:text-blue-500 */
+}
+
+/* Hero Section */
 .hero {
-    background-color: #1E3A8A; /* Azul oscuro personalizado para la sección hero */
+    background-color: #2b6cb0; /* bg-blue-600 */
+    color: #ffffff; /* text-white */
+    height: 60vh; /* h-[60vh] */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 1rem; /* p-4 */
+}
+
+.hero h1 {
+    font-size: 3rem; /* text-5xl */
+    font-weight: bold; /* font-bold */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.hero h2 {
+    font-size: 1.5rem; /* text-2xl */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.hero p {
+    font-size: 1.125rem; /* text-lg */
+    margin-bottom: 1.5rem; /* mb-6 */
+}
+
+.btn {
+    background-color: #48bb78; /* bg-green-600 */
+    color: #ffffff; /* text-white */
+    padding: 0.75rem 1.5rem; /* px-6 py-3 */
+    border-radius: 0.375rem; /* rounded-md */
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn:hover {
+    background-color: #38a169; /* hover:bg-green-700 */
+}
+
+/* Sobre mí */
+.about-section {
+    padding: 2.5rem 0; /* py-10 */
+    background-color: #edf2f7; /* bg-gray-200 */
 }
 
 .about-box {
-    background-color: #4B5563; /* Cambia el color del fondo de la sección sobre mí */
+    background-color: #a0aec0; /* bg-gray-500 */
+    border: 1px solid #e2e8f0; /* border-gray-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 1.5rem; /* p-6 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    max-width: 30rem; /* max-w-lg */
+    margin: 0 auto; /* mx-auto */
+}
+
+.about-box h2 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: bold; /* font-bold */
+    margin-bottom: 1rem; /* mb-4 */
+    color: #2d3748; /* text-gray-800 */
+}
+
+/* Habilidades y Proyectos */
+.skills-projects {
+    padding: 2.5rem 0; /* py-10 */
+    background-color: #f7fafc; /* bg-gray-100 */
+    display: flex;
+    justify-content: space-between; /* justify-between */
+    padding-left: 4rem; /* px-16 */
+    padding-right: 4rem; /* px-16 */
+    gap: 1rem; /* space-x-4 */
+}
+
+.skills,
+.projects {
+    background-color: #a0aec0; /* bg-gray-500 */
+    padding: 1.5rem; /* p-6 */
+    border: 1px solid #e2e8f0; /* border-gray-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    width: 48%; /* w-1/2 */
+    text-align: center; /* text-center */
+}
+
+.skills h2,
+.projects h2 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: bold; /* font-bold */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.skill-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* space-y-4 */
+}
+
+.skill {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold; /* font-bold */
+    font-size: 1.125rem; /* text-lg */
+}
+
+/* Proyectos */
+.project {
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.project h3 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: 600; /* font-semibold */
+}
+
+.project p {
+    margin-top: 0.5rem; /* mt-4 */
+}
+
+/* Tarifas */
+.pricing {
+    padding: 4rem 0; /* py-16 */
+    background-color: #edf2f7; /* bg-gray-200 */
+}
+
+.pricing-container {
+    display: flex;
+    justify-content: center; /* justify-center */
+    gap: 1.5rem; /* space-x-6 */
+    flex-wrap: wrap; /* flex-wrap */
+}
+
+.pricing-card {
+    background-color: #a0aec0; /* bg-gray-500 */
+    border: 1px solid #e2e8f0; /* border-gray-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 1.5rem; /* p-6 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    width: 16rem; /* w-64 */
+    transition: transform 0.3s; /* transform transition */
 }
 
 .pricing-card:hover {
-    transform: scale(1.05); /* Agrega un efecto de escala en las tarjetas de precios al pasar el mouse */
+    transform: scale(1.05); /* hover:scale-105 */
+}
+
+.pricing-card h3 {
+    font-size: 1.25rem; /* text-xl */
+    font-weight: bold; /* font-bold */
+}
+
+.price {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: bold; /* font-bold */
+    margin-top: 1rem; /* mt-4 */
+}
+
+.pricing-card ul {
+    margin-top: 1rem; /* mt-4 */
+    padding-left: 1.5rem; /* pl-4 */
+}
+
+/* Contacto */
+.contact {
+    padding: 2.5rem 0; /* py-10 */
+    background-color: #ffffff; /* bg-white */
+}
+
+.contact-box {
+    background-color: #a0aec0; /* bg-gray-500 */
+    border: 1px solid #e2e8f0; /* border-gray-300 */
+    border-radius: 0.5rem; /* rounded-lg */
+    padding: 1.5rem; /* p-6 */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    max-width: 30rem; /* max-w-lg */
+    margin: 0 auto; /* mx-auto */
+    text-align: center; /* text-center */
+}
+
+.contact-box h2 {
+    font-size: 1.5rem; /* text-2xl */
+    font-weight: bold; /* font-bold */
+    margin-bottom: 1rem; /* mb-4 */
+}
+
+.contact-box p {
+    font-size: 1.125rem; /* text-lg */
+}
+
+/* Footer */
+footer {
+    background-color: #4a5568; /* bg-gray-800 */
+    color: #ffffff; /* text-white */
+    text-align: center; /* text-center */
+    padding: 1rem; /* py-4 */
+}
+
+/* Animaciones AOS (si lo deseas) */
+[data-aos] {
+    opacity: 0;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+    transition: opacity 0.4s ease-in-out;
 }

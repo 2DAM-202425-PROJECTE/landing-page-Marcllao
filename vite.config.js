@@ -1,4 +1,13 @@
 export default {
-// config options
-    base: '/landing-page-MarcLlao/'
-}
+    base: '/landing-page-MarcLlao/',
+    build: {
+        rollupOptions: {
+            output: {
+                assetFileNames: (assetInfo) => {
+                    if (assetInfo.name == "style.css") return "css/styles.css";
+                    return assetInfo.name;
+                },
+            },
+        },
+    },
+};

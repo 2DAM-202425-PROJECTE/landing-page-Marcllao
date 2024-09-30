@@ -4,141 +4,127 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marc Llaó - Desarrollador Full-Stack</title>
-    <link rel="stylesheet" href="style.css">
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
     <!-- Enlace a Font Awesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Enlace a AOS CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <!-- Enlace al archivo CSS externo -->
+    <link rel="stylesheet" href="styles.css">
 </head>
-<body>
-<header>
-    <div class="logo-container">
-        <img src="https://insebre.cat/images/index/logo_Institut_Ebre_NEGRE.png" alt="Logo del Institut Ebre" class="logo">
+<body class="bg-gray-100 text-gray-800">
+
+<!-- Header -->
+<header class="bg-gray-800 p-4 flex items-center">
+    <div class="logo-container mr-auto">
+        <img src="https://insebre.cat/images/index/logo_Institut_Ebre_NEGRE.png" alt="Logo del Institut Ebre" class="h-12 w-auto brightness-150">
     </div>
-    <div class="nav-container">
-        <nav>
-            <ul>
-                <li><a href="#about"><i class="fas fa-user"></i> Sobre mí</a></li>
-                <li><a href="#skills-projects"><i class="fas fa-code"></i> Habilidades</a></li>
-                <li><a href="#pricing"><i class="fas fa-tags"></i> Tarifas</a></li>
-                <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
-            </ul>
-        </nav>
-    </div>
+    <nav class="flex-grow flex justify-center">
+        <ul class="flex space-x-6">
+            <li><a href="#about" class="text-white text-lg hover:text-blue-500"><i class="fas fa-user"></i> Sobre mí</a></li>
+            <li><a href="#skills-projects" class="text-white text-lg hover:text-blue-500"><i class="fas fa-code"></i> Habilidades</a></li>
+            <li><a href="#pricing" class="text-white text-lg hover:text-blue-500"><i class="fas fa-tags"></i> Tarifas</a></li>
+            <li><a href="#contact" class="text-white text-lg hover:text-blue-500"><i class="fas fa-envelope"></i> Contacto</a></li>
+        </ul>
+    </nav>
 </header>
 
-<section class="hero">
-    <div class="hero-content">
-        <h1>Marc Llaó</h1>
-        <h2>Desarrollador Web Full-Stack & Programador Backend</h2>
-        <p>Creando soluciones web innovadoras y seguras.</p>
-        <a href="#contact" class="btn"><i class="fas fa-envelope"></i> Contáctame</a>
+<!-- Hero Section -->
+<section class="hero bg-blue-600 text-white h-[60vh] flex flex-col justify-center items-center text-center p-4">
+    <h1 class="text-5xl font-bold mb-4">Marc Llaó</h1>
+    <h2 class="text-2xl mb-4">Desarrollador Web Full-Stack & Programador Backend</h2>
+    <p class="text-lg mb-6">Creando soluciones web innovadoras y seguras.</p>
+    <a href="#contact" class="btn bg-green-600 text-white px-6 py-3 rounded-md hover:bg-green-700 transition"><i class="fas fa-envelope"></i> Contáctame</a>
+</section>
+
+<!-- Sobre mí -->
+<section id="about" class="about-section py-10 bg-gray-200">
+    <div class="about-box bg-gray-500 border border-gray-300 rounded-lg p-6 shadow-lg max-w-lg mx-auto">
+        <h2 class="text-2xl font-bold mb-4 text-gray-800"><i class="fas fa-user"></i> Sobre mí</h2>
+        <p class="text-lg text-gray-800">Soy Marc Llaó, Desarrollador Web Full-Stack y Programador Backend. Me apasiona crear soluciones efectivas y eficientes a través de la tecnología.</p>
     </div>
 </section>
 
-<section id="about" class="about-section" data-aos="fade-up">
-    <div class="about-box">
-        <h2><i class="fas fa-user"></i> Sobre mí</h2>
-        <p>Soy Marc Llao, Desarrollador Web Full-Stack y Programador Backend. Me apasiona crear soluciones efectivas y eficientes a través de la tecnología.</p>
-    </div>
-</section>
-
-<section id="skills-projects" class="skills-projects" data-aos="fade-up">
-    <div class="skills">
-        <h2><i class="fas fa-code"></i> Habilidades</h2>
-        <div class="skill-list">
-            <div class="skill">
-                <i class="fas fa-language"></i>
-                <p>Inglés</p>
-            </div>
-            <div class="skill">
-                <i class="fas fa-laptop-code"></i>
-                <p>Programación Web Full-Stack</p>
-            </div>
-            <div class="skill">
-                <i class="fas fa-shield-alt"></i>
-                <p>Ciberseguridad</p>
-            </div>
+<!-- Habilidades y Proyectos -->
+<section id="skills-projects" class="skills-projects py-10 bg-gray-100 flex justify-between px-16 space-x-4">
+    <div class="skills bg-gray-500 p-6 border border-gray-300 rounded-lg w-1/2 text-center">
+        <h2 class="text-2xl font-bold mb-4"><i class="fas fa-code"></i> Habilidades</h2>
+        <div class="skill-list flex flex-col space-y-4">
+            <div class="skill flex items-center justify-center font-bold text-lg"><i class="fas fa-language text-blue-500"></i> Inglés</div>
+            <div class="skill flex items-center justify-center font-bold text-lg"><i class="fas fa-laptop-code text-blue-500"></i> Programación Web Full-Stack</div>
+            <div class="skill flex items-center justify-center font-bold text-lg"><i class="fas fa-shield-alt text-blue-500"></i> Ciberseguridad</div>
         </div>
     </div>
 
-    <div class="projects">
-        <h2><i class="fas fa-briefcase"></i> Proyectos Destacados</h2>
-        <div class="project">
-            <h3><i class="fas fa-users-cog"></i> Sistema de Gestión de Usuarios</h3>
-            <p>Una aplicación que permite gestionar usuarios y roles en tiempo real, garantizando la seguridad de los datos
-                a través de sistemas avanzados de autenticación y cifrado.</p>
+    <!-- Proyectos -->
+    <div class="projects bg-gray-500 p-6 border border-gray-300 rounded-lg w-1/2 text-center">
+        <h2 class="text-2xl font-bold mb-4"><i class="fas fa-briefcase"></i> Proyectos Destacados</h2>
+        <div class="project mb-4">
+            <h3 class="text-xl font-semibold"><i class="fas fa-users-cog text-blue-500"></i> Sistema de Gestión de Usuarios</h3>
+            <p>Una aplicación que permite gestionar usuarios y roles en tiempo real, garantizando la seguridad de los datos a través de sistemas avanzados de autenticación y cifrado.</p>
         </div>
-        <div class="project">
-            <h3><i class="fas fa-shopping-cart"></i> Plataforma de Comercio Electrónico</h3>
-            <p>Desarrollé una solución de e-commerce full-stack, implementando integración con pasarelas de pago seguras y
-                optimización para dispositivos móviles.</p>
+        <div class="project mb-4">
+            <h3 class="text-xl font-semibold"><i class="fas fa-shopping-cart text-blue-500"></i> Plataforma de Comercio Electrónico</h3>
+            <p>Desarrollé una solución de e-commerce full-stack, implementando integración con pasarelas de pago seguras y optimización para dispositivos móviles.</p>
         </div>
-        <div class="project">
-            <h3><i class="fas fa-lock"></i> API de Seguridad para Aplicaciones Web</h3>
-            <p>Creé una API que proporciona funcionalidades de seguridad avanzadas, como protección contra ataques XSS, CSRF
-                y gestión de sesiones segura.</p>
+        <div class="project mb-4">
+            <h3 class="text-xl font-semibold"><i class="fas fa-lock text-blue-500"></i> API de Seguridad para Aplicaciones Web</h3>
+            <p>Creé una API que proporciona funcionalidades de seguridad avanzadas, como protección contra ataques XSS, CSRF y gestión de sesiones segura.</p>
         </div>
     </div>
 </section>
 
-<section id="pricing" class="pricing" data-aos="fade-up">
-    <h2><i class="fas fa-tags"></i> Tarifas</h2>
-    <div class="pricing-container">
-        <div class="pricing-card">
-            <h3>Tarifa Reducida</h3>
-            <p class="price">€50/mes</p>
-            <ul>
+<!-- Tarifas -->
+<section id="pricing" class="pricing py-16 bg-gray-200">
+    <div class="pricing-container flex justify-center space-x-6 flex-wrap">
+        <div class="pricing-card bg-gray-500 border border-gray-300 rounded-lg p-6 shadow-lg w-64 hover:scale-105 transform transition">
+            <h3 class="text-xl font-bold">Tarifa Reducida</h3>
+            <p class="price text-2xl font-bold mt-4">€50/mes</p>
+            <ul class="mt-4 space-y-2">
                 <li>Soporte limitado</li>
                 <li>Acceso a recursos básicos</li>
                 <li>1 proyecto al mes</li>
             </ul>
-            <a href="#contact" class="btn">Contáctame</a>
+            <a href="#contact" class="btn bg-green-600 text-white px-4 py-2 mt-4 rounded-md hover:bg-green-700 transition">Contáctame</a>
         </div>
-
-        <div class="pricing-card">
-            <h3>Tarifa Estándar</h3>
-            <p class="price">€100/mes</p>
-            <ul>
+        <div class="pricing-card bg-gray-500 border border-gray-300 rounded-lg p-6 shadow-lg w-64 hover:scale-105 transform transition">
+            <h3 class="text-xl font-bold">Tarifa Estándar</h3>
+            <p class="price text-2xl font-bold mt-4">€100/mes</p>
+            <ul class="mt-4 space-y-2">
                 <li>Soporte prioritario</li>
                 <li>Acceso a todos los recursos</li>
                 <li>Hasta 3 proyectos al mes</li>
             </ul>
-            <a href="#contact" class="btn">Contáctame</a>
+            <a href="#contact" class="btn bg-green-600 text-white px-4 py-2 mt-4 rounded-md hover:bg-green-700 transition">Contáctame</a>
         </div>
-
-        <div class="pricing-card">
-            <h3>Tarifa Pro</h3>
-            <p class="price">€200/mes</p>
-            <ul>
+        <div class="pricing-card bg-gray-500 border border-gray-300 rounded-lg p-6 shadow-lg w-64 hover:scale-105 transform transition">
+            <h3 class="text-xl font-bold">Tarifa Pro</h3>
+            <p class="price text-2xl font-bold mt-4">€200/mes</p>
+            <ul class="mt-4 space-y-2">
                 <li>Soporte 24/7</li>
                 <li>Acceso a todos los recursos y herramientas</li>
                 <li>Proyectos ilimitados</li>
             </ul>
-            <a href="#contact" class="btn">Contáctame</a>
+            <a href="#contact" class="btn bg-green-600 text-white px-4 py-2 mt-4 rounded-md hover:bg-green-700 transition">Contáctame</a>
         </div>
     </div>
 </section>
 
-<section id="contact" class="contact" data-aos="zoom-in">
-    <div class="contact-box">
-        <h2><i class="fas fa-envelope"></i> Contacto</h2>
-        <div class="negrita">
-            <p>¿Quieres saber más sobre mí o trabajar juntos en un proyecto? No dudes en contactarme.</p>
-        </div>
-        <br>
-        <div class="contact-info">
-            <a href="mailto:mllao@iesebre.com" class="btn"><i class="fas fa-envelope"></i> Envíame un correo</a>
-            <a href="https://www.linkedin.com/in/marc-llao-lopez-5a46302ab" class="btn"><i class="fab fa-linkedin"></i> Mi LinkedIn</a>
-        </div>
+<!-- Contacto -->
+<section id="contact" class="contact py-10 bg-white">
+    <div class="contact-box bg-gray-500 border border-gray-300 rounded-lg p-6 shadow-lg max-w-lg mx-auto text-center">
+        <h2 class="text-2xl font-bold mb-4"><i class="fas fa-envelope"></i> Contacto</h2>
+        <p class="text-lg">¿Quieres saber más sobre mí o trabajar juntos en un proyecto? No dudes en contactarme.</p>
+        <a href="mailto:mllao@iesebre.com" class="btn bg-blue-600 text-white px-6 py-3 mt-4 rounded-md hover:bg-blue-700 transition"><i class="fas fa-envelope"></i> Envíame un correo</a>
+        <a href="https://www.linkedin.com/in/marc-llao-lopez-5a46302ab" class="btn bg-blue-600 text-white px-6 py-3 mt-4 rounded-md hover:bg-blue-700 transition"><i class="fab fa-linkedin"></i> Conéctate en LinkedIn</a>
     </div>
 </section>
 
-<footer>
+<!-- Footer -->
+<footer class="bg-gray-800 text-white text-center py-4">
     <p>&copy; 2024 Marc Llaó - Todos los derechos reservados.</p>
 </footer>
 
-<!-- Enlace a AOS JS -->
+<!-- AOS JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
     AOS.init({

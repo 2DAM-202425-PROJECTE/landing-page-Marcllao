@@ -1,5 +1,5 @@
 export default {
-    base: '/landing-page-MarcLlao/',
+    base: '/landing-page-Marcllao/',
     // build: {
     //     rollupOptions: {
     //         output: {

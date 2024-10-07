@@ -4,83 +4,90 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marc Llaó - Desarrollador Full-Stack</title>
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
     <!-- Enlace a Font Awesome para los iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-    <!-- Enlace al archivo CSS externo -->
-    <link rel="stylesheet" href="style.css">
+    <!-- Enlace a AOS CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
 </head>
-<body class="bg-gray-100 text-gray-800">
-
-<!-- Header -->
-<header class="header">
+<body>
+<header>
     <div class="logo-container">
-        <img src="https://insebre.cat/images/index/logo_Institut_Ebre_NEGRE.png" alt="Logo del Institut Ebre" class="logo">
+        <img src="favicon-fotor-20241002194910.png" alt="Logo del Institut Ebre" class="logo">
     </div>
-    <nav class="nav-container">
-        <ul class="nav">
-            <li><a href="#about"><i class="fas fa-user"></i> Sobre mí</a></li>
-            <li><a href="#skills-projects"><i class="fas fa-code"></i> Habilidades</a></li>
-            <li><a href="#pricing"><i class="fas fa-tags"></i> Tarifas</a></li>
-            <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
-        </ul>
-    </nav>
+    <div class="nav-container">
+        <nav>
+            <ul>
+                <li><a href="#about"><i class="fas fa-user"></i> Sobre mí</a></li>
+                <li><a href="#skills-projects"><i class="fas fa-code"></i> Habilidades</a></li>
+                <li><a href="#pricing"><i class="fas fa-tags"></i> Tarifas</a></li>
+                <li><a href="#contact"><i class="fas fa-envelope"></i> Contacto</a></li>
+            </ul>
+        </nav>
+    </div>
 </header>
 
-<!-- Hero Section -->
 <section class="hero">
-    <h1>Marc Llaó</h1>
-    <h2>Desarrollador Web Full-Stack & Programador Backend</h2>
-    <p>Creando soluciones web innovadoras y seguras.</p>
-    <a href="#contact" class="btn">Contáctame</a>
+    <div class="hero-content">
+        <h1>Marc Llaó</h1>
+        <h2>Desarrollador Web Full-Stack & Programador Backend</h2>
+        <p>Creando soluciones web innovadoras y seguras.</p>
+        <a href="#contact" class="btn"><i class="fas fa-envelope"></i> Contáctame</a>
+    </div>
 </section>
 
-<!-- Sobre mí -->
-<section id="about" class="about-section">
+<section id="about" class="about-section" data-aos="fade-up">
     <div class="about-box">
         <h2><i class="fas fa-user"></i> Sobre mí</h2>
         <p>Soy Marc Llaó, Desarrollador Web Full-Stack y Programador Backend. Me apasiona crear soluciones efectivas y eficientes a través de la tecnología.</p>
     </div>
 </section>
 
-<!-- Habilidades y Proyectos -->
-<section id="skills-projects" class="skills-projects">
-    <!-- Habilidades -->
+<section id="skills-projects" class="skills-projects" data-aos="fade-up">
     <div class="skills">
         <h2><i class="fas fa-code"></i> Habilidades</h2>
         <div class="skill-list">
-            <div class="skill"><i class="fas fa-language"></i> Inglés</div>
-            <div class="skill"><i class="fas fa-laptop-code"></i> Programación Web Full-Stack</div>
-            <div class="skill"><i class="fas fa-shield-alt"></i> Ciberseguridad</div>
+            <div class="skill">
+                <i class="fas fa-language"></i>
+                <p>Inglés</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-laptop-code"></i>
+                <p>Programación Web Full-Stack</p>
+            </div>
+            <div class="skill">
+                <i class="fas fa-shield-alt"></i>
+                <p>Ciberseguridad</p>
+            </div>
         </div>
     </div>
 
-    <!-- Proyectos -->
     <div class="projects">
         <h2><i class="fas fa-briefcase"></i> Proyectos Destacados</h2>
         <div class="project">
             <h3><i class="fas fa-users-cog"></i> Sistema de Gestión de Usuarios</h3>
-            <p>Una aplicación que permite gestionar usuarios y roles en tiempo real, garantizando la seguridad de los datos a través de sistemas avanzados de autenticación y cifrado.</p>
+            <p>Una aplicación que permite gestionar usuarios y roles en tiempo real, garantizando la seguridad de los datos
+                a través de sistemas avanzados de autenticación y cifrado.</p>
         </div>
         <div class="project">
             <h3><i class="fas fa-shopping-cart"></i> Plataforma de Comercio Electrónico</h3>
-            <p>Desarrollé una solución de e-commerce full-stack, implementando integración con pasarelas de pago seguras y optimización para dispositivos móviles.</p>
+            <p>Desarrollé una solución de e-commerce full-stack, implementando integración con pasarelas de pago seguras y
+                optimización para dispositivos móviles.</p>
         </div>
         <div class="project">
             <h3><i class="fas fa-lock"></i> API de Seguridad para Aplicaciones Web</h3>
-            <p>Creé una API que proporciona funcionalidades de seguridad avanzadas, como protección contra ataques XSS, CSRF y gestión de sesiones segura.</p>
+            <p>Creé una API que proporciona funcionalidades de seguridad avanzadas, como protección contra ataques XSS, CSRF
+                y gestión de sesiones segura.</p>
         </div>
     </div>
 </section>
 
-<!-- Tarifas -->
-<section id="pricing" class="pricing">
+<section id="pricing" class="pricing" data-aos="zoom-in">
+    <h2><i class="fas fa-tags"></i> Tarifas</h2>
     <div class="pricing-container">
-        <!-- Tarifa Reducida -->
         <div class="pricing-card">
             <h3>Tarifa Reducida</h3>
-            <p class="price">€50/mes</p>
+            <p class="price">€49,95/mes</p>
             <ul>
                 <li>Soporte limitado</li>
                 <li>Acceso a recursos básicos</li>
@@ -88,10 +95,10 @@
             </ul>
             <a href="#contact" class="btn">Contáctame</a>
         </div>
-        <!-- Tarifa Estándar -->
+
         <div class="pricing-card">
             <h3>Tarifa Estándar</h3>
-            <p class="price">€100/mes</p>
+            <p class="price">€99,95/mes</p>
             <ul>
                 <li>Soporte prioritario</li>
                 <li>Acceso a todos los recursos</li>
@@ -99,10 +106,10 @@
             </ul>
             <a href="#contact" class="btn">Contáctame</a>
         </div>
-        <!-- Tarifa Pro -->
+
         <div class="pricing-card">
             <h3>Tarifa Pro</h3>
-            <p class="price">€200/mes</p>
+            <p class="price">€199,50/mes</p>
             <ul>
                 <li>Soporte 24/7</li>
                 <li>Acceso a todos los recursos y herramientas</li>
@@ -113,26 +120,39 @@
     </div>
 </section>
 
-<!-- Contacto -->
-<section id="contact" class="contact">
+<section id="contact" class="contact" data-aos="zoom-in">
     <div class="contact-box">
         <h2><i class="fas fa-envelope"></i> Contacto</h2>
-        <p>¿Quieres saber más sobre mí o trabajar juntos en un proyecto? No dudes en contactarme.</p>
-        <a href="mailto:mllao@iesebre.com" class="btn">Envíame un correo</a>
-        <a href="https://www.linkedin.com/in/marc-llao-lopez-5a46302ab" class="btn">Conéctate en LinkedIn</a>
+        <div class="negrita">
+            <p>¿Quieres saber más sobre mí o trabajar juntos en un proyecto? No dudes en contactarme.</p>
+        </div>
+        <br>
+        <div class="contact-info">
+            <a href="mailto:mllao@iesebre.com" class="btn"><i class="fas fa-envelope"></i> Envíame un correo</a>
+            <a href="https://www.linkedin.com/in/marc-llao-lopez-5a46302ab" class="btn"><i class="fab fa-linkedin"></i> Mi LinkedIn</a>
+        </div>
     </div>
 </section>
 
-<!-- Footer -->
 <footer>
     <p>&copy; 2024 Marc Llaó - Todos los derechos reservados.</p>
+    <div class="cookie-consent">
+        <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario. <a href="#cookies-info">Más información</a>.</p>
+        <button id="accept-cookies" class="btn">Aceptar</button>
+    </div>
 </footer>
 
-<!-- AOS JS -->
+
+<!-- Enlace a AOS JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
     AOS.init({
         duration: 1200,  // Duración de la animación en milisegundos
+    });
+</script>
+<script>
+    document.getElementById('accept-cookies').addEventListener('click', function() {
+        document.querySelector('.cookie-consent').style.display = 'none';
     });
 </script>
 </body>

@@ -9,6 +9,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <!-- Enlace a AOS CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+    <style>
+        /* Estilos para la alerta de cookies */
+        .cookie-consent {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 15px;
+            text-align: center;
+            z-index: 9999;
+        }
+        .cookie-consent a {
+            color: #ffd700;
+        }
+        .cookie-consent .btn {
+            background-color: #ffd700;
+            color: black;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+        .cookie-consent .btn:hover {
+            background-color: #e0c600;
+        }
+    </style>
 </head>
 <body>
 <header>
@@ -128,20 +154,32 @@
         </div>
         <br>
         <div class="contact-info">
-            <a href="mailto:mllao@iesebre.com" class="btn"><i class="fas fa-envelope"></i> Envíame un correo</a>
-            <a href="https://www.linkedin.com/in/marc-llao-lopez-5a46302ab" class="btn"><i class="fab fa-linkedin"></i> Mi LinkedIn</a>
+            <form id="contact-form">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required>
+                
+                <label for="email">Correo Electrónico:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="message">Mensaje:</label>
+                <textarea id="message" name="message" required></textarea>
+                
+                <button type="submit" class="btn"><i class="fas fa-envelope"></i> Enviar Mensaje</button>
+            </form>
+            <p id="confirmation-message" style="display:none; color: green;">Tu mensaje ha sido enviado correctamente.</p>
         </div>
     </div>
 </section>
 
 <footer>
     <p>&copy; 2024 Marc Llaó - Todos los derechos reservados.</p>
-    <div class="cookie-consent">
-        <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario. <a href="#cookies-info">Más información</a>.</p>
-        <button id="accept-cookies" class="btn">Aceptar</button>
-    </div>
 </footer>
 
+<!-- Alerta de cookies -->
+<div class="cookie-consent">
+    <p>Este sitio web utiliza cookies para mejorar la experiencia del usuario. <a href="#cookies-info">Más información</a>.</p>
+    <button id="accept-cookies" class="btn">Aceptar</button>
+</div>
 
 <!-- Enlace a AOS JS -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
@@ -153,6 +191,12 @@
 <script>
     document.getElementById('accept-cookies').addEventListener('click', function() {
         document.querySelector('.cookie-consent').style.display = 'none';
+    });
+</script>
+<script>
+    document.getElementById('contact-form').addEventListener('submit', function(event) {
+        event.preventDefault();  // Evita que el formulario realice alguna acción
+        document.getElementById('confirmation-message').style.display = 'block';  // Muestra el mensaje de confirmación
     });
 </script>
 </body>
